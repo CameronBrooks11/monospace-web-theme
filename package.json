@@ -4,8 +4,8 @@
   "author": "Cameron K. Brooks <cambrooks3393@gmail.com> (https://www.cameronbrooks.net/)",
   "description": "A pure‐CSS + JS monospace grid theme for any static site",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/CameronBrooks11/monospace-web-theme.git"
+    "type": "git",
+    "url": "git+https://github.com/CameronBrooks11/monospace-web-theme.git"
   },
   "homepage": "https://github.com/CameronBrooks11/monospace-web-theme#readme",
   "bugs": {
