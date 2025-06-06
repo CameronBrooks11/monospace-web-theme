@@ -1,6 +1,6 @@
 {
   "name": "monospace-web-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Cameron K. Brooks <cambrooks3393@gmail.com> (https://www.cameronbrooks.net/)",
   "description": "A pure‐CSS + JS monospace grid theme for any static site",
   "repository": {
@@ -16,7 +16,7 @@
   "style": "dist/monospace.css",
   "scripts": {
     "build": "npm run build:css && npm run build:js",
-    "build:css": "concat-cli -f src/reset.css src/theme.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
+    "build:css": "concat-cli -f src/fonts.css src/reset.css src/theme.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
     "build:js": "babel src/script.js -o dist/monospace.js && terser dist/monospace.js -o dist/monospace.min.js"
   },
   "files": [
