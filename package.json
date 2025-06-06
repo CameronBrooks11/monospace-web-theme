@@ -1,0 +1,42 @@
+{
+  "name": "monospace-web-theme",
+  "version": "1.0.0",
+  "author": "Cameron K. Brooks <cambrooks3393@gmail.com> (https://www.cameronbrooks.net/)",
+  "description": "A pure‐CSS + JS monospace grid theme for any static site",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/CameronBrooks11/monospace-web-theme.git"
+  },
+  "homepage": "https://github.com/CameronBrooks11/monospace-web-theme#readme",
+  "bugs": {
+    "url": "https://github.com/CameronBrooks11/monospace-web-theme/issues"
+  },
+  "license": "MIT",
+  "main": "dist/monospace.js",
+  "style": "dist/monospace.css",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "concat-cli -f src/reset.css src/theme.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
+    "build:js": "babel src/script.js -o dist/monospace.js && terser dist/monospace.js -o dist/monospace.min.js"
+  },
+  "files": [
+    "dist/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "monospace",
+    "grid"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.20.2",
+    "concat-cli": "^4.0.0",
+    "cssnano": "^5.1.15",
+    "postcss": "^8.5.4",
+    "postcss-cli": "^10.1.0",
+    "terser": "^5.17.0"
+  }
+}

@@ -1,0 +1,71 @@
+/* Eric Meyer's Reset CSS v2.0 | 20110126 | Public Domain */
+/* Source: http://meyerweb.com/eric/tools/css/reset/ */
+/* Modified by Cameron K. Brooks, June 2025 */
+
+/* Reset box model, font inheritance, and vertical alignment */
+html, body, div, span, applet, object, iframe,			/* structure */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,				/* text blocks */
+a, abbr, acronym, address, big, cite, code,				/* inline/semantic */
+del, dfn, em, img, ins, kbd, q, s, samp,				/* inline/semantic */
+small, strike, strong, sub, sup, tt, var,				/* inline/semantic */
+b, u, i, center,										/* inline/legacy */
+dl, dt, dd, ol, ul, li,									/* lists */
+fieldset, form, label, legend,							/* forms */
+table, caption, tbody, tfoot, thead, tr, th, td,		/* tables */
+article, aside, canvas, details, embed,					/* HTML5/media */
+figure, figcaption, footer, header, hgroup,				/* HTML5 layout */
+menu, nav, output, ruby, section, summary,				/* HTML5 layout */
+time, mark, audio, video                               /* HTML5/media */ {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Ensure HTML5 elements render correctly in older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Set base line height */
+body {
+  line-height: 1;
+}
+
+/* Remove list bullets and indentation */
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove quote styles */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* Normalize table layout */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

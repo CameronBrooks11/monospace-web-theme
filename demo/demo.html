@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monospace Web Theme Demo</title>
+    <link rel="stylesheet" href="../dist/monospace.min.css" />
+</head>
+
+<body>
+
+    <!-- Header with Title & Subtitle -->
+    <h1>The Monospace Web Theme</h1>
+    <p><em>A minimal, character-aligned grid for modern browsers</em></p>
+
+    <!-- Version/Date Table (manually demonstrated) -->
+    <table>
+        <tr>
+            <th>Version</th>
+            <td>v1.0.0</td>
+            <th>Updated</th>
+            <td>2025-06-05</td>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td><cite>Your Name</cite></td>
+            <th>License</th>
+            <td>MIT</td>
+        </tr>
+    </table>
+
+    <!-- Debug Toggle -->
+    <label class="debug-toggle-label">
+        <input type="checkbox" class="debug-toggle" />
+        Show Grid Overlay
+    </label>
+
+    <!-- Table of Contents (static example) -->
+    <nav role="doc-toc">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#grids">Grids</a></li>
+            <li><a href="#ascii">ASCII Drawings</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <h2 id="intro">Introduction</h2>
+    <p>Monospace fonts offer clarity and a retro aesthetic. This theme enforces a character-aligned grid, perfect for
+        code-style layouts, tables, forms, and ASCII art—all in pure CSS plus a small JS helper.</p>
+
+    <p>Switch your OS/browser to dark mode to see the inverted colors.</p>
+
+    <!-- Lists Section -->
+    <h2 id="lists">Lists</h2>
+    <p>Unordered list:</p>
+    <ul>
+        <li>Banana</li>
+        <li>Paper boat</li>
+        <li>Cucumber</li>
+        <li>Rocket</li>
+    </ul>
+    <p>Ordered list:</p>
+    <ol>
+        <li>Goals
+            <ol>
+                <li>Intrinsic</li>
+                <li>Extrinsic</li>
+            </ol>
+        </li>
+        <li>Second-order Effects</li>
+    </ol>
+    <p>Tree view:</p>
+    <ul class="tree">
+        <li><strong>/dev/nvme0n1p2</strong>
+            <ul>
+                <li>usr
+                    <ul>
+                        <li>bin</li>
+                        <li>lib</li>
+                        <li>games
+                            <ul>
+                                <li>solitaire</li>
+                                <li>snake</li>
+                                <li>tic-tac-toe</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>media</li>
+                <li>tmp</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Tables Section -->
+    <h2 id="tables">Tables</h2>
+    <p>Responsive table:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Dimensions</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Boboli Obelisk</td>
+                <td>1.41m × 1.41m × 4.87m</td>
+                <td>43°45′50.78″N 11°15′3.34″E</td>
+            </tr>
+            <tr>
+                <td>Pyramid of Khafre</td>
+                <td>215.25m × 215.25m × 136.4m</td>
+                <td>29°58′34″N 31°07′51″E</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Forms Section -->
+    <h2 id="forms">Forms</h2>
+    <p>Buttons:</p>
+    <nav>
+        <button>Reset</button>
+        <button>Save</button>
+    </nav>
+    <p>Text inputs:</p>
+    <form class="grid">
+        <label>First name <input type="text" placeholder="Alice" /></label>
+        <label>Last name <input type="text" placeholder="Smith" /></label>
+        <label>Age <input type="number" value="30" /></label>
+    </form>
+    <p>Radio buttons:</p>
+    <form class="grid">
+        <label><input name="radio" type="radio" /> Option 1</label>
+        <label><input name="radio" type="radio" /> Option 2</label>
+        <label><input name="radio" type="radio" /> Option 3</label>
+    </form>
+
+    <!-- Grids Section -->
+    <h2 id="grids">Grids</h2>
+    <p>Note that grids maintain the monospace, so the total width might not be 100%. Six grids with increasing cell
+        count:</p>
+    <div class="grid">
+        <input readonly value="1" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly
+            value="4" /><input readonly value="5" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly
+            value="4" /><input readonly value="5" /><input readonly value="6" />
+    </div>
+    <p>If we want one cell to fill the remainder, we set
+        <code>flex-grow: 1;</code> for that particular cell.
+    </p>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3!"
+            style="flex-grow: 1;" /><input readonly value="4" /><input readonly value="5" /><input readonly value="6" />
+    </div>
+    <div class="grid">
+        <input readonly value="1" /><input readonly value="2" /><input readonly value="3!"
+            style="flex-grow: 1;" /><input readonly value="4!" style="flex-grow: 1;" /><input readonly
+            value="5" /><input readonly value="6" />
+    </div>
+    <p>Note however that this breaks the monospace alignment, as the grid is not
+        <code>display: grid;</code> but rather <code>display: flex;</code>.
+
+    </p>
+
+    <!-- ASCII Drawings Section -->
+    <h2 id="ascii">ASCII Drawings</h2>
+    <pre><code>╭─────────────────╮
+│ MONOSPACE ROCKS │
+╰─────────────────╯</code></pre>
+    <figure>
+        <pre>
+┌───────┐ ┌───────┐ ┌───────┐
+│Actor 1│ │Actor 2│ │Actor 3│
+└───┬───┘ └───┬───┘ └───┬───┘
+    │         │         │    
+    │         │  msg 1  │    
+    │         │────────►│    
+    │         │         │    
+    │  msg 2  │         │    
+    │────────►│         │    
+┌───┴───┐ ┌───┴───┐ ┌───┴───┐
+│Actor 1│ │Actor 2│ │Actor 3│
+└───────┘ └───────┘ └───────┘</pre>
+        <figcaption>Example: Message passing.</figcaption>
+    </figure>
+
+    <!-- Details Section -->
+    <h2 id="details">Details & Summary</h2>
+    <details>
+        <summary> Click to expand </summary>
+        <p>Hidden content inside <code>&lt;details&gt;</code> stays on the grid.</p>
+    </details>
+
+    <!-- Media Section -->
+    <h2 id="media">Media</h2>
+    <p>Responsive image example:</p>
+    <figure>
+        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Italian Trulli Houses" />
+        <figcaption>An image of Trulli Houses (sample)</figcaption>
+    </figure>
+    <p>Responsive video example:</p>
+    <figure>
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+        <figcaption>Big Buck Bunny (sample)</figcaption>
+    </figure>
+
+    <!-- Footer / Discussion -->
+    <h2 id="discussion">Discussion</h2>
+    <p>This demo shows how headings, tables, forms, lists, grids, ASCII art, and media snap to a monospace grid. Toggle
+        “Show Grid Overlay” to verify alignment.</p>
+
+    <!-- Debug Grid Overlay Container -->
+    <div class="debug-grid"></div>
+
+    <!-- Monospace-grid JS Helper -->
+    <script src="../dist/monospace.min.js"></script> 
+</body>
+
+</html>
