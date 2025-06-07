@@ -61,8 +61,6 @@ live-server --open=demo/demo.html
 
 If you’re looking for a more turnkey Markdown → HTML workflow (Pandoc + GitHub Actions), check out [the-monospace-web](https://github.com/CameronBrooks11/the-monospace-web). It uses this theme as an npm dependency and publishes a fully responsive, character-aligned site from your `.md` files.
 
-Start here if you just want to make a simple site or start playing around with the *monospace-web-theme* by forking this repository.
-
 ## Build & Publish
 
 1. Install dependencies
