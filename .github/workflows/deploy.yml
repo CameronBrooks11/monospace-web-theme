@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths:
-      - "demo/demo.html" # Trigger deployment when the demo is updated
-      - "dist/**" # Trigger deployment when the theme is updated
+      - "demo/demo.html" # trigger when demo changes
+      - "dist/**" # trigger when the theme (dist/) changes
+      - ".github/workflows/deploy.yml" # trigger when this workflow changes
 
 permissions:
   contents: read
@@ -18,21 +19,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Check out the repo
       - name: Checkout source
         uses: actions/checkout@v4
 
+      # 2. Configure GitHub Pages
       - name: Set up Pages
         uses: actions/configure-pages@v4
 
+      # 3. Gather all files into _site/
       - name: Prepare deployment content
         run: |
-          mkdir _site
+          mkdir -p _site/dist
+          # make demo/demo.html the index
           cp demo/demo.html _site/index.html
+          # copy the built CSS/JS
+          cp -R dist/* _site/dist/
 
+      # 4. Upload everything under _site/ as the Pages artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
+      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
