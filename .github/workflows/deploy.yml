@@ -2,7 +2,7 @@ name: Build & Deploy Demo to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - 'src/**'
       - 'demo/demo.html'
@@ -21,17 +21,21 @@ jobs:
     outputs:
       dist-path: ${{ steps.upload.outputs.artifact-path }}
     steps:
+      # Check out code
       - uses: actions/checkout@v4
 
+      # Install Node & deps
       - uses: actions/setup-node@v3
-        with: { node-version: '18' }
-
+        with:
+          node-version: '18'
       - run: npm ci
 
+      # Build CSS/JS into dist/
       - run: npm run build
 
-      - uses: actions/upload-artifact@v3
-        id: upload
+      # Upload dist/ as a reusable artifact
+      - name: Upload theme dist
+        uses: actions/upload-artifact@v4
         with:
           name: theme-dist
           path: dist/
@@ -40,23 +44,31 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      # Re-checkout to get workflow files
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v3
+      # Pull in previously built dist/
+      - name: Download theme dist
+        uses: actions/download-artifact@v4
         with:
           name: theme-dist
           path: dist/
 
+      # Configure Pages deployment
       - uses: actions/configure-pages@v4
 
-      - name: Prepare _site
+      # Stage demo + dist into _site/
+      - name: Prepare _site directory
         run: |
           mkdir -p _site/dist
-          sed 's|\.\./dist/|./dist/|g' demo/demo.html > _site/index.html 
+          # Rewrite demo paths to point to local ./dist/
+          sed 's|\.\./dist/|./dist/|g' demo/demo.html > _site/index.html
           cp -R dist/* _site/dist/
 
+      # Upload _site/ for Pages
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
+      # Deploy to GitHub Pages
       - uses: actions/deploy-pages@v4
