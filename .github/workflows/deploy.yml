@@ -6,8 +6,7 @@ on:
       - main
     paths:
       - "demo/demo.html" # trigger when demo changes
-      - "dist/**" # trigger when the theme (dist/) changes
-      - ".github/workflows/deploy.yml" # trigger when this workflow changes
+      - ".github/workflows/deploy.yml" # trigger when workflow changes
 
 permissions:
   contents: read
@@ -27,14 +26,11 @@ jobs:
       - name: Set up Pages
         uses: actions/configure-pages@v4
 
-      # 3. Gather all files into _site/
+      # 3. Copy demo/demo.html to root _site/index.html
       - name: Prepare deployment content
         run: |
-          mkdir -p _site/dist
-          # make demo/demo.html the index
+          mkdir -p _site
           cp demo/demo.html _site/index.html
-          # copy the built CSS/JS
-          cp -R dist/* _site/dist/
 
       # 4. Upload everything under _site/ as the Pages artifact
       - name: Upload artifact
