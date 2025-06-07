@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/**'
-      - 'demo/demo.html'
-      - 'package.json'
-      - 'postcss.config.js'
-      - '.github/workflows/deploy.yml'
+      - "src/**"
+      - "demo/demo.html"
+      - "package.json"
+      - "postcss.config.js"
+      - ".github/workflows/deploy.yml"
 
 permissions:
   contents: read
@@ -27,8 +27,12 @@ jobs:
       # Install Node & deps
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: npm ci
+
+      # ensure dist/ exists before concatenating into it
+      - name: Create dist folder
+        run: mkdir -p dist
 
       # Build CSS/JS into dist/
       - run: npm run build

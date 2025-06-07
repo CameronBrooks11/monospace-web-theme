@@ -5,7 +5,7 @@
 
 A pure CSS + JavaScript theme that enforces a character-aligned grid, monospace typography, and responsive design.
 
-> _Live demo: [CameronBrooks11.github.io/monospace-web](https://CameronBrooks11.github.io/the-monospace-web/)_
+> _Live demo: [CameronBrooks11.github.io/monospace-web-theme](https://CameronBrooks11.github.io/monospace-web-theme/)_
 
 ---
 
