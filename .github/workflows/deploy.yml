@@ -1,12 +1,14 @@
-name: Deploy to GitHub Pages
+name: Build & Deploy Demo to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
-      - "demo/demo.html" # trigger when demo changes
-      - ".github/workflows/deploy.yml" # trigger when workflow changes
+      - 'src/**'
+      - 'demo/demo.html'
+      - 'package.json'
+      - 'postcss.config.js'
+      - '.github/workflows/deploy.yml'
 
 permissions:
   contents: read
@@ -14,30 +16,47 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
+    outputs:
+      dist-path: ${{ steps.upload.outputs.artifact-path }}
     steps:
-      # 1. Check out the repo
-      - name: Checkout source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # 2. Configure GitHub Pages
-      - name: Set up Pages
-        uses: actions/configure-pages@v4
+      - uses: actions/setup-node@v3
+        with: { node-version: '18' }
 
-      # 3. Copy demo/demo.html to root _site/index.html
-      - name: Prepare deployment content
+      - run: npm ci
+
+      - run: npm run build
+
+      - uses: actions/upload-artifact@v3
+        id: upload
+        with:
+          name: theme-dist
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: theme-dist
+          path: dist/
+
+      - uses: actions/configure-pages@v4
+
+      - name: Prepare _site
         run: |
-          mkdir -p _site
-          cp demo/demo.html _site/index.html
+          mkdir -p _site/dist
+          sed 's|\.\./dist/|./dist/|g' demo/demo.html > _site/index.html 
+          cp -R dist/* _site/dist/
 
-      # 4. Upload everything under _site/ as the Pages artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-      # 5. Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
