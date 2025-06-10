@@ -11,6 +11,26 @@
 
 <body>
 
+    <div class="grid"
+        style="--grid-cells: 2; align-items: baseline; column-gap: 1ch; max-width: 26ch; margin-bottom: calc(var(--line-height) * 2);">
+        <label for="theme-selector" style="margin: 0; line-height: var(--line-height);">Theme:</label>
+        <select id="theme-selector" onchange="document.documentElement.setAttribute('data-theme', this.value)"
+            style="width: 100%; padding: 0.25rem 0.5ch; font: inherit;">
+            <option value="">Default</option>
+            <option value="rose">Rose</option>
+            <option value="ocean">Ocean</option>
+            <option value="forest">Forest</option>
+            <option value="desert">Desert</option>
+            <option value="twilight">Twilight</option>
+            <option value="sepia">Sepia</option>
+            <option value="glacier">Glacier</option>
+            <option value="clay">Clay</option>
+            <option value="midnight">Midnight</option>
+            <option value="sandstone">Sandstone</option>
+        </select>
+    </div>
+
+
     <!-- Header with Title & Subtitle -->
     <h1>The Monospace Web Theme</h1>
     <p><em>A minimal, character-aligned grid for modern browsers</em></p>
@@ -65,7 +85,7 @@
     <p>Monospace fonts offer clarity and a retro aesthetic. This theme enforces a character-aligned grid, perfect for
         code-style layouts, tables, forms, and ASCII art—all in pure CSS plus a small JS helper.</p>
 
-    <p>Switch your OS/browser to dark mode to see the inverted colors.</p>
+    <p>Switch your OS/browser between light and dark mode to see the inverted colors.</p>
 
     <!-- Lists Section -->
     <h2 id="lists">Lists</h2>

@@ -94,7 +94,7 @@ Ensure only `dist/*`, `README.md`, `LICENSE`, and `package.json` appear.
 
 4. Publish to npm
 
-Bump the version in package.json, create a Git tag (e.g. `v1.0.1`), then:
+Bump the version in package.json, create a Git tag (e.g. `git tag v0.0.1`), then:
 
 ```bash
 git push --tags
