@@ -30,10 +30,6 @@
             color: var(--text-color);
         }
 
-        .panel h3 {
-            margin-top: 0;
-        }
-
         .sample {
             margin: var(--line-height) 0;
         }
@@ -47,16 +43,17 @@
 
     <script>
         const flavours = [
-            "rose", "ocean", "forest", "desert", "twilight",
-            "sepia", "glacier", "clay", "midnight", "sandstone",
-            "dracula", "solarized", "monokai", "terminal"
+            "rose", "ocean", "forest", "desert", "sepia", "twilight",
+            "glacier", "clay", "midnight", "sandstone", "coral", "mint",
+            "mauve", "slate", "honey", "rust", "dracula", "solarized",
+            "monokai", "gruvbox", "nord", "one-dark", "palenight", "terminal"
         ];
 
         for (const theme of flavours) {
             document.write(`
-        <section>
+        <section data-theme="${theme}">
           <h2 style="text-transform:capitalize">${theme.replace(/-/g, ' ')}</h2>
-          <div class="panel" data-theme="${theme}">
+          <div class="panel">
             <p class="sample">The quick brown fox jumps over the lazy dog.</p>
             <button>Button</button>
           </div>

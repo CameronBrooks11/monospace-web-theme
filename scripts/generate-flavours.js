@@ -11,23 +11,30 @@ const themes = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
 let out = `/* ========== Flavour Overrides (Light + Dark Mode) ========== */\n\n`;
 
 for (const [name, cfg] of Object.entries(themes)) {
-  const sel = `:root[data-theme="${name}"]`;
+  // add `[data-theme="…"]` so *any* element with that attribute will scope the vars
+  const sel = [
+    `:root[data-theme="${name}"]`,
+    `html[data-theme="${name}"]`,
+    `[data-theme="${name}"]`,
+  ].join(", ");
+
   // light mode
   out +=
     `${sel} {\n` +
-    `  --background-color: ${cfg.light.bg};\n` +
+    `  --background-color:     ${cfg.light.bg};\n` +
     `  --background-color-alt: ${cfg.light.bgAlt};\n` +
-    `  --text-color: ${cfg.light.text};\n` +
-    `  --text-color-alt: ${cfg.light.textAlt};\n` +
+    `  --text-color:           ${cfg.light.text};\n` +
+    `  --text-color-alt:       ${cfg.light.textAlt};\n` +
     `}\n\n`;
+
   // dark mode
   out +=
     `@media (prefers-color-scheme: dark) {\n` +
     `  ${sel} {\n` +
-    `    --background-color: ${cfg.dark.bg};\n` +
+    `    --background-color:     ${cfg.dark.bg};\n` +
     `    --background-color-alt: ${cfg.dark.bgAlt};\n` +
-    `    --text-color: ${cfg.dark.text};\n` +
-    `    --text-color-alt: ${cfg.dark.textAlt};\n` +
+    `    --text-color:           ${cfg.dark.text};\n` +
+    `    --text-color-alt:       ${cfg.dark.textAlt};\n` +
     `  }\n` +
     `}\n\n`;
 }
