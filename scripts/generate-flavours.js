@@ -11,7 +11,7 @@ const themes = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
 let out = `/* ========== Flavour Overrides (Light + Dark Mode) ========== */\n\n`;
 
 for (const [name, cfg] of Object.entries(themes)) {
-  const sel = `[data-theme="${name}"]`;
+  const sel = `:root[data-theme="${name}"]`;
   // light mode
   out +=
     `${sel} {\n` +
