@@ -6,46 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monospace Web Theme Demo</title>
     <link rel="stylesheet" href="../dist/monospace.min.css" />
-    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monospace-web-theme@1.0.1/dist/monospace.min.css" /> -->
 </head>
 
 <body>
 
     <div class="grid"
-        style="--grid-cells: 2; align-items: center; column-gap: 1ch; max-width: 32ch; margin-bottom: calc(var(--line-height) * 2);">
-        <label for="theme-selector"
-            style="margin: 0; font-weight: 500; line-height: var(--line-height); white-space: nowrap;">
+        style="--grid-cells:2;align-items:center;column-gap:1ch;max-width:32ch;margin-bottom:calc(var(--line-height)*2)">
+        <label for="theme-selector" style="margin:0;font-weight:500;line-height:var(--line-height);white-space:nowrap">
             Theme:
         </label>
         <select id="theme-selector" onchange="document.documentElement.setAttribute('data-theme', this.value)"
-            style="width: 100%; max-width: 20ch; padding: 0.25rem 0.5ch; font: inherit; border: 1px solid var(--text-color-alt); background: var(--background-color-alt); color: var(--text-color);">
+            style="width:100%;max-width:20ch;padding:0.25rem 0.5ch;font:inherit;border:1px solid var(--text-color-alt);background:var(--background-color-alt);color:var(--text-color)">
             <option value="">Default</option>
-            <option value="clay">Clay</option>
-            <option value="coral">Coral</option>
-            <option value="desert">Desert</option>
-            <option value="dracula">Dracula</option>
-            <option value="forest">Forest</option>
-            <option value="glacier">Glacier</option>
-            <option value="gruvbox">Gruvbox</option>
-            <option value="honey">Honey</option>
-            <option value="mauve">Mauve</option>
-            <option value="midnight">Midnight</option>
-            <option value="mint">Mint</option>
-            <option value="monokai">Monokai</option>
-            <option value="nord">Nord</option>
+            <option value="rose">Rose</option>
             <option value="ocean">Ocean</option>
+            <option value="forest">Forest</option>
+            <option value="desert">Desert</option>
+            <option value="sepia">Sepia</option>
+            <option value="twilight">Twilight</option>
+            <option value="glacier">Glacier</option>
+            <option value="clay">Clay</option>
+            <option value="midnight">Midnight</option>
+            <option value="sandstone">Sandstone</option>
+            <option value="coral">Coral</option>
+            <option value="mint">Mint</option>
+            <option value="mauve">Mauve</option>
+            <option value="slate">Slate</option>
+            <option value="honey">Honey</option>
+            <option value="rust">Rust</option>
+            <option value="dracula">Dracula</option>
+            <option value="solarized">Solarized</option>
+            <option value="monokai">Monokai</option>
+            <option value="gruvbox">Gruvbox</option>
+            <option value="nord">Nord</option>
             <option value="one-dark">One Dark</option>
             <option value="palenight">Palenight</option>
-            <option value="rose">Rose</option>
-            <option value="rust">Rust</option>
-            <option value="sandstone">Sandstone</option>
-            <option value="sepia">Sepia</option>
-            <option value="slate">Slate</option>
-            <option value="solarized">Solarized</option>
             <option value="terminal">Terminal</option>
-            <option value="twilight">Twilight</option>
         </select>
     </div>
+
+    <p style="margin-bottom:var(--line-height)">
+        <a href="flavours.html">View all flavours in panels →</a>
+    </p>
 
     <!-- Header with Title & Subtitle -->
     <h1>The Monospace Web Theme</h1>
