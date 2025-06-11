@@ -20,13 +20,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - run: npm ci
-      - run: npm run build
-      - uses: actions/upload-artifact@v4
+
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Ensure `dist/` folder exists
+        run: mkdir -p dist
+
+      - name: Build CSS & JS
+        run: npm run build
+
+      - name: Upload theme dist artifact
+        uses: actions/upload-artifact@v4
         with:
           name: theme-dist
           path: dist/
@@ -35,25 +47,32 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download built theme dist
+        uses: actions/download-artifact@v4
         with:
           name: theme-dist
           path: dist/
-      - uses: actions/configure-pages@v4
 
-      - name: Prepare _site directory
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Prepare `_site` directory
         run: |
           mkdir -p _site/dist
-          # rewrite paths in demo.html → index.html
+          # rewrite demo paths and generate index.html
           sed 's|\.\./dist/|./dist/|g' demo/demo.html > _site/index.html
-          # copy flavours.html verbatim
+          # copy flavours.html alongside
           cp demo/flavours.html _site/flavours.html
-          # copy all CSS/JS
+          # copy all built CSS/JS into `_site/dist/`
           cp -R dist/* _site/dist/
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload `_site` for Pages
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
