@@ -11,12 +11,8 @@ const themes = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
 let out = `/* ========== Flavour Overrides (Light + Dark Mode) ========== */\n\n`;
 
 for (const [name, cfg] of Object.entries(themes)) {
-  // add `[data-theme="…"]` so *any* element with that attribute will scope the vars
-  const sel = [
-    `:root[data-theme="${name}"]`,
-    `html[data-theme="${name}"]`,
-    `[data-theme="${name}"]`,
-  ].join(", ");
+  // one selector covers any element (html, section, div, etc.) with data-theme="…"
+  const sel = `[data-theme="${name}"]`;
 
   // light mode
   out +=
