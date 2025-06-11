@@ -28,10 +28,10 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install NPM dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Ensure `dist/` folder exists
+      - name: Ensure `dist/` exists
         run: mkdir -p dist
 
       - name: Build CSS & JS
@@ -62,10 +62,13 @@ jobs:
       - name: Prepare `_site` directory
         run: |
           mkdir -p _site/dist
-          # rewrite demo paths and generate index.html
+
+          # rewrite demo paths: ../dist/... → dist/...
           sed 's|\.\./dist/|./dist/|g' demo/demo.html > _site/index.html
-          # copy flavours.html alongside
-          cp demo/flavours.html _site/flavours.html
+
+          # rewrite flavours page paths too
+          sed 's|\.\./dist/|dist/|g' demo/flavours.html > _site/flavours.html
+
           # copy all built CSS/JS into `_site/dist/`
           cp -R dist/* _site/dist/
 
