@@ -15,9 +15,10 @@
   "main": "dist/monospace.js",
   "style": "dist/monospace.css",
   "scripts": {
-    "build": "npm run build:css && npm run build:js",
-    "build:css": "concat-cli -f src/fonts.css src/reset.css src/theme.css src/flavours.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
-    "build:js": "babel src/script.js -o dist/monospace.js && terser dist/monospace.js -o dist/monospace.min.js"
+    "gen:flavours": "node scripts/generate-flavours.js",
+    "build:css": "npm run gen:flavours && concat-cli -f src/fonts.css src/reset.css src/theme.css src/flavours.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
+    "build:js": "babel src/script.js -o dist/monospace.js && terser dist/monospace.js -o dist/monospace.min.js",
+    "build": "npm run build:css && npm run build:js"
   },
   "files": [
     "dist/*",

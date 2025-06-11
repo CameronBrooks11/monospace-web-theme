@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Monospace Web Theme — All Flavours</title>
+    <link rel="stylesheet" href="../dist/monospace.min.css" />
+    <style>
+        body {
+            padding: var(--line-height) 2ch;
+        }
+
+        h1 {
+            margin-bottom: calc(var(--line-height) * 2);
+        }
+
+        p {
+            margin-bottom: calc(var(--line-height) * 2);
+        }
+
+        section {
+            margin-bottom: calc(var(--line-height) * 3);
+        }
+
+        .panel {
+            padding: var(--line-height);
+            border: var(--border-thickness) solid var(--text-color);
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .panel h3 {
+            margin-top: 0;
+        }
+
+        .sample {
+            margin: var(--line-height) 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Monospace Web Theme — All Flavours</h1>
+    <p>Theme adapts to your system’s light or dark mode preference. Switch it to preview both.</p>
+
+    <script>
+        const flavours = [
+            "rose", "ocean", "forest", "desert", "twilight",
+            "sepia", "glacier", "clay", "midnight", "sandstone",
+            "dracula", "solarized", "monokai", "terminal"
+        ];
+
+        for (const theme of flavours) {
+            document.write(`
+        <section>
+          <h2 style="text-transform:capitalize">${theme.replace(/-/g, ' ')}</h2>
+          <div class="panel" data-theme="${theme}">
+            <p class="sample">The quick brown fox jumps over the lazy dog.</p>
+            <button>Button</button>
+          </div>
+        </section>
+      `);
+        }
+    </script>
+
+    <script src="../dist/monospace.min.js"></script>
+</body>
+
+</html>

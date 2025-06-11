@@ -12,24 +12,40 @@
 <body>
 
     <div class="grid"
-        style="--grid-cells: 2; align-items: baseline; column-gap: 1ch; max-width: 26ch; margin-bottom: calc(var(--line-height) * 2);">
-        <label for="theme-selector" style="margin: 0; line-height: var(--line-height);">Theme:</label>
+        style="--grid-cells: 2; align-items: center; column-gap: 1ch; max-width: 32ch; margin-bottom: calc(var(--line-height) * 2);">
+        <label for="theme-selector"
+            style="margin: 0; font-weight: 500; line-height: var(--line-height); white-space: nowrap;">
+            Theme:
+        </label>
         <select id="theme-selector" onchange="document.documentElement.setAttribute('data-theme', this.value)"
-            style="width: 100%; padding: 0.25rem 0.5ch; font: inherit;">
+            style="width: 100%; max-width: 20ch; padding: 0.25rem 0.5ch; font: inherit; border: 1px solid var(--text-color-alt); background: var(--background-color-alt); color: var(--text-color);">
             <option value="">Default</option>
-            <option value="rose">Rose</option>
-            <option value="ocean">Ocean</option>
-            <option value="forest">Forest</option>
-            <option value="desert">Desert</option>
-            <option value="twilight">Twilight</option>
-            <option value="sepia">Sepia</option>
-            <option value="glacier">Glacier</option>
             <option value="clay">Clay</option>
+            <option value="coral">Coral</option>
+            <option value="desert">Desert</option>
+            <option value="dracula">Dracula</option>
+            <option value="forest">Forest</option>
+            <option value="glacier">Glacier</option>
+            <option value="gruvbox">Gruvbox</option>
+            <option value="honey">Honey</option>
+            <option value="mauve">Mauve</option>
             <option value="midnight">Midnight</option>
+            <option value="mint">Mint</option>
+            <option value="monokai">Monokai</option>
+            <option value="nord">Nord</option>
+            <option value="ocean">Ocean</option>
+            <option value="one-dark">One Dark</option>
+            <option value="palenight">Palenight</option>
+            <option value="rose">Rose</option>
+            <option value="rust">Rust</option>
             <option value="sandstone">Sandstone</option>
+            <option value="sepia">Sepia</option>
+            <option value="slate">Slate</option>
+            <option value="solarized">Solarized</option>
+            <option value="terminal">Terminal</option>
+            <option value="twilight">Twilight</option>
         </select>
     </div>
-
 
     <!-- Header with Title & Subtitle -->
     <h1>The Monospace Web Theme</h1>

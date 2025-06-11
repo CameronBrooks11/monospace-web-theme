@@ -1,0 +1,338 @@
+{
+    "rose": {
+        "light": {
+            "bg": "#fff0f5",
+            "bgAlt": "#ffe5ee",
+            "text": "#550a2a",
+            "textAlt": "#a02040"
+        },
+        "dark": {
+            "bg": "#3b0a24",
+            "bgAlt": "#4d122c",
+            "text": "#ffe5ee",
+            "textAlt": "#ffb6c1"
+        }
+    },
+    "ocean": {
+        "light": {
+            "bg": "#f0fcff",
+            "bgAlt": "#e0f9ff",
+            "text": "#00475d",
+            "textAlt": "#007c96"
+        },
+        "dark": {
+            "bg": "#002933",
+            "bgAlt": "#003a47",
+            "text": "#e0f9ff",
+            "textAlt": "#90dffa"
+        }
+    },
+    "forest": {
+        "light": {
+            "bg": "#f3fff0",
+            "bgAlt": "#ecffeb",
+            "text": "#2a4f2a",
+            "textAlt": "#4f7f4f"
+        },
+        "dark": {
+            "bg": "#1a2e1a",
+            "bgAlt": "#243f24",
+            "text": "#d6f5d6",
+            "textAlt": "#a4d4a4"
+        }
+    },
+    "desert": {
+        "light": {
+            "bg": "#faf3d7",
+            "bgAlt": "#f5e8b8",
+            "text": "#8b6d1f",
+            "textAlt": "#b98a00"
+        },
+        "dark": {
+            "bg": "#3f351f",
+            "bgAlt": "#5a4a2a",
+            "text": "#f5e8b8",
+            "textAlt": "#efd08f"
+        }
+    },
+    "sepia": {
+        "light": {
+            "bg": "#f4ece2",
+            "bgAlt": "#e8d9c5",
+            "text": "#5d3a1a",
+            "textAlt": "#8b5a2b"
+        },
+        "dark": {
+            "bg": "#392b24",
+            "bgAlt": "#4f3b32",
+            "text": "#e8d9c5",
+            "textAlt": "#cbb3a3"
+        }
+    },
+    "twilight": {
+        "light": {
+            "bg": "#f0f0ff",
+            "bgAlt": "#e8e8ff",
+            "text": "#2a2a5b",
+            "textAlt": "#4f4fa3"
+        },
+        "dark": {
+            "bg": "#1e1e3a",
+            "bgAlt": "#2a2a4f",
+            "text": "#e0d8ff",
+            "textAlt": "#bfb3ff"
+        }
+    },
+    "glacier": {
+        "light": {
+            "bg": "#f4fbff",
+            "bgAlt": "#e6f7fd",
+            "text": "#003344",
+            "textAlt": "#005566"
+        },
+        "dark": {
+            "bg": "#0d1a1f",
+            "bgAlt": "#1a2d33",
+            "text": "#ccf2ff",
+            "textAlt": "#99e0f2"
+        }
+    },
+    "clay": {
+        "light": {
+            "bg": "#f8ebe4",
+            "bgAlt": "#e6c8ba",
+            "text": "#8b453f",
+            "textAlt": "#b66e63"
+        },
+        "dark": {
+            "bg": "#3b2e2a",
+            "bgAlt": "#513f3c",
+            "text": "#e6c8ba",
+            "textAlt": "#d0a49d"
+        }
+    },
+    "midnight": {
+        "light": {
+            "bg": "#111622",
+            "bgAlt": "#1a1f2f",
+            "text": "#d0d8ff",
+            "textAlt": "#a0b0e0"
+        },
+        "dark": {
+            "bg": "#0a0f18",
+            "bgAlt": "#141a29",
+            "text": "#d0d8ff",
+            "textAlt": "#a0b0e0"
+        }
+    },
+    "sandstone": {
+        "light": {
+            "bg": "#fbede2",
+            "bgAlt": "#f1d2c4",
+            "text": "#a34f3e",
+            "textAlt": "#c96b54"
+        },
+        "dark": {
+            "bg": "#3a2b27",
+            "bgAlt": "#513f3b",
+            "text": "#f1d2c4",
+            "textAlt": "#d8ac9e"
+        }
+    },
+    "coral": {
+        "light": {
+            "bg": "#fff5f0",
+            "bgAlt": "#ffe6dc",
+            "text": "#d1443c",
+            "textAlt": "#e65a49"
+        },
+        "dark": {
+            "bg": "#4b1e16",
+            "bgAlt": "#5c2a21",
+            "text": "#ffe6dc",
+            "textAlt": "#ffb8aa"
+        }
+    },
+    "mint": {
+        "light": {
+            "bg": "#f0fff4",
+            "bgAlt": "#e0ffea",
+            "text": "#1f5d40",
+            "textAlt": "#3a8f6b"
+        },
+        "dark": {
+            "bg": "#1a2a1e",
+            "bgAlt": "#243a27",
+            "text": "#e0ffea",
+            "textAlt": "#a0d2ac"
+        }
+    },
+    "mauve": {
+        "light": {
+            "bg": "#faf5ff",
+            "bgAlt": "#f1eaff",
+            "text": "#5b2a5b",
+            "textAlt": "#7f4f7f"
+        },
+        "dark": {
+            "bg": "#2e1e2e",
+            "bgAlt": "#3c2a3c",
+            "text": "#f1eaff",
+            "textAlt": "#d6b3d6"
+        }
+    },
+    "slate": {
+        "light": {
+            "bg": "#f4f6f8",
+            "bgAlt": "#e6e9ed",
+            "text": "#2e3a47",
+            "textAlt": "#48535f"
+        },
+        "dark": {
+            "bg": "#181f24",
+            "bgAlt": "#242c31",
+            "text": "#e6e9ed",
+            "textAlt": "#b0b6bb"
+        }
+    },
+    "honey": {
+        "light": {
+            "bg": "#fff9e6",
+            "bgAlt": "#fff3cc",
+            "text": "#7f5900",
+            "textAlt": "#a36f0a"
+        },
+        "dark": {
+            "bg": "#3a2d14",
+            "bgAlt": "#503f1c",
+            "text": "#fff3cc",
+            "textAlt": "#ffe599"
+        }
+    },
+    "rust": {
+        "light": {
+            "bg": "#fff0ea",
+            "bgAlt": "#ffdacf",
+            "text": "#8b2e0f",
+            "textAlt": "#b34718"
+        },
+        "dark": {
+            "bg": "#2f1a15",
+            "bgAlt": "#422a23",
+            "text": "#ffdacf",
+            "textAlt": "#ffb699"
+        }
+    },
+    "dracula": {
+        "light": {
+            "bg": "#f8f8f2",
+            "bgAlt": "#e8e8dc",
+            "text": "#282a36",
+            "textAlt": "#44475a"
+        },
+        "dark": {
+            "bg": "#282a36",
+            "bgAlt": "#373a4f",
+            "text": "#f8f8f2",
+            "textAlt": "#bd93f9"
+        }
+    },
+    "solarized": {
+        "light": {
+            "bg": "#fdf6e3",
+            "bgAlt": "#eee8d5",
+            "text": "#657b83",
+            "textAlt": "#586e75"
+        },
+        "dark": {
+            "bg": "#002b36",
+            "bgAlt": "#073642",
+            "text": "#fdf6e3",
+            "textAlt": "#93a1a1"
+        }
+    },
+    "monokai": {
+        "light": {
+            "bg": "#f5f5f5",
+            "bgAlt": "#e8e8e8",
+            "text": "#272822",
+            "textAlt": "#75715e"
+        },
+        "dark": {
+            "bg": "#272822",
+            "bgAlt": "#3e3d32",
+            "text": "#f8f8f2",
+            "textAlt": "#f92672"
+        }
+    },
+    "gruvbox": {
+        "light": {
+            "bg": "#fbf1c7",
+            "bgAlt": "#f9f5d7",
+            "text": "#3c3836",
+            "textAlt": "#504945"
+        },
+        "dark": {
+            "bg": "#282828",
+            "bgAlt": "#32302f",
+            "text": "#ebdbb2",
+            "textAlt": "#d5c4a1"
+        }
+    },
+    "nord": {
+        "light": {
+            "bg": "#eceff4",
+            "bgAlt": "#e5e9f0",
+            "text": "#2e3440",
+            "textAlt": "#4c566a"
+        },
+        "dark": {
+            "bg": "#2e3440",
+            "bgAlt": "#3b4252",
+            "text": "#d8dee9",
+            "textAlt": "#e5e9f0"
+        }
+    },
+    "one-dark": {
+        "light": {
+            "bg": "#fafafa",
+            "bgAlt": "#f0f0f0",
+            "text": "#383a42",
+            "textAlt": "#525358"
+        },
+        "dark": {
+            "bg": "#282c34",
+            "bgAlt": "#353b45",
+            "text": "#abb2bf",
+            "textAlt": "#cad3e0"
+        }
+    },
+    "palenight": {
+        "light": {
+            "bg": "#f5f2fa",
+            "bgAlt": "#ebe8f5",
+            "text": "#4a4563",
+            "textAlt": "#6c678e"
+        },
+        "dark": {
+            "bg": "#292d3e",
+            "bgAlt": "#444267",
+            "text": "#e0def4",
+            "textAlt": "#c3bef0"
+        }
+    },
+    "terminal": {
+        "light": {
+            "bg": "#000000",
+            "bgAlt": "#001100",
+            "text": "#00ff00",
+            "textAlt": "#66ff66"
+        },
+        "dark": {
+            "bg": "#000000",
+            "bgAlt": "#001100",
+            "text": "#00ff00",
+            "textAlt": "#66ff66"
+        }
+    }
+}

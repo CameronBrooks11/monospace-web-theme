@@ -40,6 +40,29 @@ import "monospace-web-theme/dist/monospace.min.css";
 import "monospace-web-theme/dist/monospace.min.js";
 ```
 
+## 🌈 Theme Flavours
+
+The default style is high-contrast black-on-white (and inverted in dark mode). To try some different colour styles, set a `data-theme` attribute on `<html>`:
+
+```html
+<html data-theme="twilight"></html>
+```
+
+**Supported themes:**
+
+- **rose** – romantic pinks
+- **ocean** – cool aquas
+- **forest** – soft greens
+- **desert** – warm sands
+- **twilight** – dusky purples
+- **sepia** – editorial browns
+- **glacier** – icy blues
+- **clay** – muted earth
+- **midnight** – dark mode primary
+- **sandstone** – soft red earth
+
+_All themes support `prefers-color-scheme: dark` automatically._
+
 ## Demo
 
 A standalone demo page is included under demo/demo.html. To preview locally:
