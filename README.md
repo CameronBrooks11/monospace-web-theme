@@ -48,18 +48,32 @@ The default style is high-contrast black-on-white (and inverted in dark mode). T
 <html data-theme="twilight"></html>
 ```
 
-**Supported themes:**
+## 🎨 Available Colour Flavours
 
-- **rose** – romantic pinks
-- **ocean** – cool aquas
-- **forest** – soft greens
-- **desert** – warm sands
-- **twilight** – dusky purples
-- **sepia** – editorial browns
-- **glacier** – icy blues
-- **clay** – muted earth
-- **midnight** – dark mode primary
-- **sandstone** – soft red earth
+- **rose**: Romantic pinks
+- **ocean**: Cool aquas
+- **forest**: Soft greens
+- **desert**: Warm sands
+- **sepia**: Editorial browns
+- **twilight**: Dusky purples
+- **glacier**: Icy blues
+- **clay**: Muted earth
+- **midnight**: Dark-mode primary
+- **sandstone**: Soft red earth
+- **coral**: Vibrant corals
+- **mint**: Fresh mints
+- **mauve**: Soft purples
+- **slate**: Cool grays
+- **honey**: Golden yellows
+- **rust**: Burnt oranges
+- **dracula**: Classic dark theme
+- **solarized**: Solarized light/dark
+- **monokai**: Monokai code theme
+- **gruvbox**: Warm coder palette
+- **nord**: Arctic Nord theme
+- **one-dark**: Atom One Dark
+- **palenight**: Palenight pastel
+- **terminal**: Retro green on black
 
 _All themes support `prefers-color-scheme: dark` automatically._
 
