@@ -16,7 +16,7 @@
   "style": "dist/monospace.css",
   "scripts": {
     "build": "npm run build:css && npm run build:js",
-    "build:css": "concat-cli -f src/fonts.css src/reset.css src/theme.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
+    "build:css": "concat-cli -f src/fonts.css src/reset.css src/theme.css src/flavours.css -o dist/monospace.css && postcss dist/monospace.css -o dist/monospace.min.css",
     "build:js": "babel src/script.js -o dist/monospace.js && terser dist/monospace.js -o dist/monospace.min.js"
   },
   "files": [

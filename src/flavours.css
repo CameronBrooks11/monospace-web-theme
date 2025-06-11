@@ -1,0 +1,163 @@
+/* ========== Flavour Overrides (Light + Dark Mode) ========== */
+
+/* Default (no data-theme): black on white, handled in :root + media query */
+
+/* --- Rose (romantic pinks) --- */
+:root[data-theme="rose"] {
+  --background-color: #fff0f5;
+  --background-color-alt: #ffe5ee;
+  --text-color: #550a2a;
+  --text-color-alt: #a02040;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="rose"] {
+    --background-color: #3b0a24;
+    --background-color-alt: #4d122c;
+    --text-color: #ffe5ee;
+    --text-color-alt: #ffb6c1;
+  }
+}
+
+/* --- Ocean (aqua blues) --- */
+:root[data-theme="ocean"] {
+  --background-color: #f0fcff;
+  --background-color-alt: #e0f9ff;
+  --text-color: #00475d;
+  --text-color-alt: #007c96;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="ocean"] {
+    --background-color: #002933;
+    --background-color-alt: #003a47;
+    --text-color: #e0f9ff;
+    --text-color-alt: #90dffa;
+  }
+}
+
+/* --- Forest (natural greens) --- */
+:root[data-theme="forest"] {
+  --background-color: #f3fff0;
+  --background-color-alt: #ecffeb;
+  --text-color: #2a4f2a;
+  --text-color-alt: #4f7f4f;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="forest"] {
+    --background-color: #1a2e1a;
+    --background-color-alt: #243f24;
+    --text-color: #d6f5d6;
+    --text-color-alt: #a4d4a4;
+  }
+}
+
+/* --- Desert (golden sand) --- */
+:root[data-theme="desert"] {
+  --background-color: #fffaf0;
+  --background-color-alt: #fff0e0;
+  --text-color: #5b3a00;
+  --text-color-alt: #a36b00;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="desert"] {
+    --background-color: #3b2a10;
+    --background-color-alt: #4f3a1a;
+    --text-color: #ffe5b4;
+    --text-color-alt: #ffd699;
+  }
+}
+
+/* --- Twilight (dusk purples) --- */
+:root[data-theme="twilight"] {
+  --background-color: #f0f0ff;
+  --background-color-alt: #e8e8ff;
+  --text-color: #2a2a5b;
+  --text-color-alt: #4f4fa3;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="twilight"] {
+    --background-color: #1e1e3a;
+    --background-color-alt: #2a2a4f;
+    --text-color: #e0d8ff;
+    --text-color-alt: #bfb3ff;
+  }
+}
+
+/* --- Sepia (warm editorial) --- */
+:root[data-theme="sepia"] {
+  --background-color: #fef8f0;
+  --background-color-alt: #f5ead7;
+  --text-color: #5b4636;
+  --text-color-alt: #927a64;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="sepia"] {
+    --background-color: #2e241b;
+    --background-color-alt: #3c2f25;
+    --text-color: #f5ead7;
+    --text-color-alt: #e0cba8;
+  }
+}
+
+/* --- Glacier (icy cool) --- */
+:root[data-theme="glacier"] {
+  --background-color: #f4fbff;
+  --background-color-alt: #e6f7fd;
+  --text-color: #003344;
+  --text-color-alt: #005566;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="glacier"] {
+    --background-color: #0d1a1f;
+    --background-color-alt: #1a2d33;
+    --text-color: #ccf2ff;
+    --text-color-alt: #99e0f2;
+  }
+}
+
+/* --- Clay (earthy tones) --- */
+:root[data-theme="clay"] {
+  --background-color: #f7f0e8;
+  --background-color-alt: #e7dfd6;
+  --text-color: #4b3a2d;
+  --text-color-alt: #7a6655;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="clay"] {
+    --background-color: #2b211a;
+    --background-color-alt: #3b2e24;
+    --text-color: #e7dfd6;
+    --text-color-alt: #c5b6a8;
+  }
+}
+
+/* --- Midnight (true dark w/ hints of blue) --- */
+:root[data-theme="midnight"] {
+  --background-color: #111622;
+  --background-color-alt: #1a1f2f;
+  --text-color: #d0d8ff;
+  --text-color-alt: #a0b0e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="midnight"] {
+    --background-color: #0a0f18;
+    --background-color-alt: #141a29;
+    --text-color: #d0d8ff;
+    --text-color-alt: #a0b0e0;
+  }
+}
+
+/* --- Sandstone (reddish earth) --- */
+:root[data-theme="sandstone"] {
+  --background-color: #fdf6f0;
+  --background-color-alt: #f5e8df;
+  --text-color: #662e1c;
+  --text-color-alt: #9c4a2e;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="sandstone"] {
+    --background-color: #2e1b14;
+    --background-color-alt: #3a231b;
+    --text-color: #f5e8df;
+    --text-color-alt: #e0b8a8;
+  }
+}
