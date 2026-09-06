@@ -35,7 +35,7 @@
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "concat-cli": "^4.0.0",
-    "cssnano": "^8.0.7",
+    "cssnano": "^9.0.2",
     "postcss": "^8.5.4",
     "postcss-cli": "^11.0.1",
     "terser": "^5.17.0"
